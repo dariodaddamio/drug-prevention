@@ -1,4 +1,5 @@
 import Form from "./Form";
+import "../index.css";
 
 const FormManagement = () => {
   return (
@@ -6,14 +7,14 @@ const FormManagement = () => {
       <h2 className="font-[Montserrat] font-bold text-2xl text-myoffwhite mb-4">
         Form Management
       </h2>
-      <ul className="space-y-2 max-h-64 overflow-auto">
+      <ul className="space-y-2 max-h-64 overflow-auto scrollbar-hide">
         <Form title="Drug-Free Workplace" link="#form-1" />
         <Form title="Deviations and Exceptions (if any)" link="#form-2" />
         <Form title="Addendum Acknowledgement (if any)" link="#form-2" />
         <Form title="Non-Collusion" link="#form-2" />
-        <Form title="W-9" link="#form-2" />
         <Form title="Offer & Acceptance" link="#form-2" />
         <Form title="Confidential/Proprietary Submittals" link="#form-2" />
+        <Form title="W-9" link="#form-2" />
 
         {/* Add more forms as needed */}
       </ul>

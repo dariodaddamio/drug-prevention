@@ -69,7 +69,7 @@ const ToDoList = () => {
         />
         <button
           onClick={addTask}
-          className="font-[Montserrat] mt-2 bg-mymint text-myblack p-2 rounded w-full"
+          className="font-[Outfit] mt-2 bg-mymint text-myblack p-2 rounded w-full"
         >
           Add Task
         </button>

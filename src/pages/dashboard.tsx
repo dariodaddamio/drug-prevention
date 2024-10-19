@@ -4,6 +4,7 @@ import FormManagement from "../components/FormManagement";
 import FileManagement from "../components/FileManagement";
 import RFPApplication from "../components/RFPApplication";
 import Footer from "../components/Footer";
+import Chatbot from "../components/Chatbot";
 
 const Dashboard = () => {
   const links = [
@@ -34,6 +35,9 @@ const Dashboard = () => {
       </div>
       <div id="rfp-application" className="flex p-8 bg-mybrown">
         <RFPApplication />
+      </div>
+      <div id="chatbot" className="flex p-8 bg-mydarkblue">
+        <Chatbot />
       </div>
       <div id="footer" className="flex p-8 bg-mydarkblue">
         <Footer />
