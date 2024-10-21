@@ -10,6 +10,8 @@ const Form: React.FC<FormProps> = ({ title, link }) => {
     <li>
       <a
         href={link}
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-mymint p-2 rounded flex justify-between items-center font-[Outfit] text-myblack no-underline group"
       >
         <span>{title}</span>

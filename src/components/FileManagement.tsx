@@ -1,5 +1,5 @@
 import { useState } from "react";
-import File from "./File";
+import { Download, X } from "lucide-react";
 
 const FileManagement = () => {
   const [files, setFiles] = useState<string[]>([
@@ -16,6 +16,10 @@ const FileManagement = () => {
       setFiles([...files, newFile]);
       setNewFile("");
     }
+  };
+
+  const fakeDownloadFile = (fileName: string) => {
+    alert(`Downloading ${fileName}`);
   };
 
   const removeFile = (index: number) => {
@@ -57,8 +61,21 @@ const FileManagement = () => {
       </div>
       <ul className="space-y-2">
         {filteredFiles.map((file, index) => (
-          <li key={index}>
-            <File name={file} onRemove={() => removeFile(index)} />
+          <li
+            key={index}
+            className="flex justify-between items-center bg-myoffwhite p-2 rounded w-full"
+          >
+            <span className="flex-1">{file}</span>
+            <div className="flex space-x-2">
+              <Download
+                className="cursor-pointer text-mylightblue"
+                onClick={() => fakeDownloadFile(file)}
+              />
+              <X
+                className="cursor-pointer text-red-500"
+                onClick={() => removeFile(index)}
+              />
+            </div>
           </li>
         ))}
       </ul>
